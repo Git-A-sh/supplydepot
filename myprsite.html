@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PR site</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+
+    <style>
+
+
+        /*자기소개 텍스트 스타일*/
+        .pr_texts{position: relative; top: 1000px;
+            font-size: 100px;}
+
+        /*네비바 스타일*/
+        .navbar{z-index: 3;}
+        #navbar-example2 .navbar-brand{position:relative; left: 50px;}
+        #navbar-example2{position: fixed; width: 100%; top: 0px; left: 0px; outline: 1px solid rgb(163, 160, 160); }
+        .nav-item{margin: 8px;}
+
+        /*처음 인사 스타일*/
+        .first_texts_container{position: relative; height: 1000px; border: 1px solid black; width: 100%; background-color: rgb(0, 0, 0); z-index: 50; top: 0px;
+        /*처음 인사 애니매이션*/
+        animation-name: start; animation-duration: 1s; animation-iteration-count: 1; animation-delay: 2s; animation-fill-mode: forwards;
+        }
+        .first_texts{position: relative; top: 40%;} 
+        .ash{height: 850px; position: relative; margin: 10px auto; text-align: center; opacity: 1; width: 130px; height: 130px; left: 46.5%;}
+
+        @keyframes start{
+            from{opacity: 1;}
+            
+            to{opacity: 0; display: none;}
+            }
+
+        /*처음 인사 버튼*/
+        .start_button{position: relative; margin: 25px auto; width: 300px; height: 50px; text-align: center;} /*버튼 크기 글씨 조정*/
+        .button{margin: auto; width: 100%; display: block; text-align: center; position: relative; top: 40%; /*버튼 가운데 정렬 밑 위치 조정*/
+            animation-name: start; animation-duration: 10s; animation-iteration-count: 1; animation-delay: 0s; animation-fill-mode: forwards; /*버튼 애니매이션*/
+        } 
+        
+        .main{padding-top: 75px; width: 100%; height: auto; position: relative; background-color: rgb(235, 231, 226);} /*바디 위쪽 여백 설정*/
+
+        /*기본 소개 스타일*/
+        .move_texts{width: 100%;}
+        .intro_pic{width: 50%; height: 890px; background-color: black;}
+        .intro_pic .img{border-radius: 70%; width: 300px; height: 300px; z-index: 1; position: relative; left: 60%;}
+        .intro_text{width: 50%; height: 890px; left: 10%; position: relative;}
+        .introtexts{font-size: 30px; list-style: none;}
+
+        /*
+        .hello{width: 100%; position: absolute; top: 40%; background-color: white; height: 300px;}
+        .say{width: 100%; margin: 10px auto; position: relative; color: white; font-size: 50px;}
+        .S{width: 90%; margin: 10px auto; background-color: white(252, 252, 252); height: 300px;} 
+
+        
+        .S0{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); height: 300px; color: white;}
+        .S1{animation-name: hello; animation-duration: 12s; animation-iteration-count: infinite; }
+        .S2{animation-name: hello; animation-duration: 12s; animation-iteration-count: infinite; }
+        .S3{animation-name: hello; animation-duration: 12s; animation-iteration-count: infinite; }
+        .S4{animation-name: hello; animation-duration: 12s; animation-iteration-count: infinite; }
+        .S5{animation-name: hello; animation-duration: 12s; animation-iteration-count: infinite; }
+        .S6{animation-name: hello; animation-duration: 12s; animation-iteration-count: infinite; }
+        .S7{animation-name: hello; animation-duration: 12s; animation-iteration-count: infinite; }
+
+        .E0{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); height: 300px; color: white; }
+        .E1{animation-name: hello_E; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 3s;}
+        .E2{animation-name: hello_E; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 3s;}
+        .E3{animation-name: hello_E; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 3s;}
+        .E4{animation-name: hello_E; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 3s;}
+        .E5{animation-name: hello_E; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 3s;}
+        .E6{animation-name: hello_E; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 3s;}
+        .E7{animation-name: hello_E; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 3s;}
+
+        .J0{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); height: 300px; color: white; }
+        .J1{animation-name: hello_J; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 9s;}
+        .J2{animation-name: hello_J; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 9s;}
+        .J3{animation-name: hello_J; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 9s;}
+        .J4{animation-name: hello_J; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 9s;}
+        .J5{animation-name: hello_J; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 9s;}
+        .J6{animation-name: hello_J; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 9s;}
+        .J7{animation-name: hello_J; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 9s;}
+
+        .P0{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); height: 300px; color: white; }
+        .P1{animation-name: hello_P; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 9s;}
+        .P2{animation-name: hello_P; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 9s;}
+        .P3{animation-name: hello_P; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 9s;}
+        .P4{animation-name: hello_P; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 9s;}
+        .P5{animation-name: hello_P; animation-duration: 12s; animation-iteration-count: infinite;  animation-delay: 9s;}
+
+
+        @keyframes hello{
+          from{opacity: 1; color: black;}
+          24%{opacity: 1;}
+          25%{opacity: 0; color: white; display: none;}
+          50%{opacity: 0; display: none;}
+          75%{opacity: 0; display: none;}
+          to{opacity: 0; display: none;}
+        }
+
+        @keyframes hello_E{
+          from{opacity: 0; display: none;}
+          25%{opacity: 1; color: black;}
+          49%{opacity: 1; color: black;}
+          50%{opacity: 0; color: white;}
+          75%{opacity: 0;}
+          to{opacity: 0;}
+        }
+        
+        @keyframes hello_J{
+          from{opacity: 0; color: white; display: none;}
+          25%{opacity: 0; color: white;}
+          50%{opacity: 1; color: black;}
+          74%{opacity: 1; color: black;}
+          75%{opacity: 0; color: white;}
+          to{opacity: 0; color: white;}
+        }
+
+        @keyframes hello_P{
+          from{opacity: 0; color: white; display: none;}
+          25%{opacity: 0; color: white}
+          49%{opacity: 0; color: white}
+          50%{opacity: 0; color: white}
+          75%{opacity: 0; color: black}
+          to{opacity: 1; color: black}
+        }
+
+        */
+
+        .ntm{text-align: center; font-size: 150px;}
+        .ntmimg{width: 150px; height: 150px;}
+    </style>
+
+        <!--맨 위 네비바-->
+        <div class="navbar">
+        <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+        <a class="navbar-brand" href="#">ASH</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">나의 소개</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">자주 묻는 질문</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading3">감사말</a>
+          </li>
+        </ul>
+         </nav>
+        </div>
+
+    </head>
+  <body>
+
+        <!-- 처음 인사 -->
+        <div class="first_texts_container">
+       <!-- <img src="img/main page.png" style="width: 100%; height: 890px;"> -->
+      
+        <div class="first_texts">
+           <img class="ash" img src="img/Ash image.jpg">
+        </div>
+        <br>
+
+        <!--
+        <div class="button">
+        <button class="start_button">시작!</button>
+
+        </div>-->
+        </div>
+        
+    <div class="main">
+        <!-- 기본 소개 -->
+       
+        <!--
+            <table class="move_texts">
+            <tr>
+            <th class="intro_pic">
+                <img class="img" src="img/개발자 사진.png">
+
+            </th>
+            
+            <th class="intro_text">
+                <ul class="introtexts">
+                    <li>이름: 안상현 </li>
+                    <li>나이: 만 24세 </li>
+                    <li>거주지: 충청북도 옥천군 </li>
+                    <li>이메일: jklli3@naver.com </li>
+                </ul>
+            </th>
+            </tr>
+            </table>
+       
+          -->
+
+        <!--
+        <div class="hello">
+          <div class="say">
+            <div class="S">
+            <div class="S0">
+            <span class="S1">SAY (</span>
+            <span class="S2">안</span>
+            <span class="S3">녕</span>
+            <span class="S4">하</span>
+            <span class="S5">세</span>
+            <span class="S6">요</span>
+            <span class="S7">)</span>
+            </div>
+            </div>
+
+              <div class="E0">
+            <span class="E1">SAY (</span>
+            <span class="E2">H</span>
+            <span class="E3">E</span>
+            <span class="E4">L</span>
+            <span class="E5">L</span>
+            <span class="E6">O</span>
+            <span class="E7">)</span>
+            </div>
+
+            <div class="J0">
+              <span class="J1">SAY (</span>
+              <span class="J2">こ</span>
+              <span class="J3">ん</span>
+              <span class="J4">に</span>
+              <span class="J5">ち</span>
+              <span class="J6">は</span>
+              <span class="J7">)</span>
+              </div>
+
+              <div class="P0">
+                <span class="P1">SAY (</span>
+                <span class="P2">O</span>
+                <span class="P3">l</span>
+                <span class="P4">á</span>
+                <span class="P5">)</span>
+                </div>
+          
+          </div>
+        </div>
+      -->
+
+
+      <div class="ntm">
+        <span> NICE TO </span>
+        <img class="ntmimg" src="img/245_696_146_안녕하세요.gif">
+        <span> MEET </span>
+        <div> YOU </div>
+
+      </div>
+
+        <!--자기 소개 시작-->
+         <div class="pr_texts">
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <h4 id="scrollspyHeading1"> 나의 소개 </h4>
+        <p>...</p>
+        <h4 id="scrollspyHeading2"> 자주 묻는 질문 </h4>
+        <p>...</p>
+        <h4 id="scrollspyHeading3"> 감사말 </h4>
+        <p>...</p>
+      </div>
+        </div>
+
+
+    </div>
+  </body>
+</html>
